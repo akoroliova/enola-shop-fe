@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Cormorant Garamond", serif;
     color: #434455;
     background-color: var(--white, #fff);
     margin: 0;
@@ -53,7 +53,7 @@ section {
     max-width: 320px;
     padding: 0 15px;
     margin: 0 auto;
-    /* to see container boundaries, delete later */
+    /* to see container boundaries. Delete later */
     /* outline: 2px solid red; */
     outline-offset: -2px;
 }

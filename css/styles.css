@@ -1,3 +1,48 @@
+@font-face {
+    /* cormorant-sc-regular */
+    font-display: swap;
+    font-family: 'Cormorant SC';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/cormorant-sc-v18-cyrillic_cyrillic-ext_latin-regular.woff2') format('woff2');
+}
+
+/* cormorant-garamond-regular */
+@font-face {
+    font-display: swap;
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/cormorant-garamond-v16-cyrillic_cyrillic-ext_latin-regular.woff2') format('woff2');
+}
+
+/* cormorant-garamond-italic */
+@font-face {
+    font-display: swap;
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/cormorant-garamond-v16-cyrillic_cyrillic-ext_latin-italic.woff2') format('woff2');
+}
+
+/* cormorant-garamond-700 */
+@font-face {
+    font-display: swap;
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/cormorant-garamond-v16-cyrillic_cyrillic-ext_latin-700.woff2') format('woff2');
+}
+
+/* noto-sans-regular */
+@font-face {
+    font-display: swap;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/noto-sans-v36-cyrillic_cyrillic-ext_latin-regular.woff2') format('woff2');
+}
+
 :root {
     scroll-behavior: smooth;
     --color-brand-light-slate: #8e8f99;

@@ -45,20 +45,21 @@
 
 :root {
     scroll-behavior: smooth;
-    --color-brand-light-slate: #8e8f99;
-    --color-brand-cornflower: #e7e9fc;
-    --color-brand-cloud: #f4f4fd;
-    --color-brand-navy-blue: #2e2f42;
-    --color-brand-slate: #434455;
-    --color-brand-almost-black: rgba(0, 0, 0, 0.67);
+    --color-brand-white: rgb(255, 255, 255);
+    --color-brand-light-beige: rgb(239, 235, 232);
+    --color-brand-dim-beige: rgb(217, 217, 217);
+    --color-brand-beige: rgb(180, 170, 160);
+    --color-brand-dark-beige: rgb(112, 91, 79);
+    --color-brand-almost-black: rgba(217, 217, 217, 0);
+    --color-brand-black: rgb(0, 0, 0);
 }
 
 body {
-    font-family: "Cormorant Garamond", serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 23px;
     font-weight: 400;
-    color: var(--color-brand-slate);
-    background-color: var(--color-brand-cloud);
+    color: var(--color-brand-black);
+    background-color: var(--color-brand-white);
 }
 
 h1,
@@ -74,7 +75,7 @@ p {
 
 link,
 link:visited {
-    font-family: Karla;
+    font-family: 'Noto Sans';
     color: var(--color-brand-almost-black);
     text-decoration: none;
 }
@@ -97,12 +98,10 @@ svg {
 
 button {
     cursor: pointer;
-    border: 1px solid rgb(255, 255, 255);
-    padding-left: 9px;
-    padding-top: 12px;
+    border: 1px solid;
 
-    color: rgb(0, 0, 0);
-    font-family: Karla;
+    font-family: 'Noto Sans';
+    text-transform: uppercase;
     font-size: 21px;
     font-weight: 400;
     line-height: 25px;
@@ -118,7 +117,7 @@ section {
     /* to see container boundaries. Delete later */
     /* outline: 2px solid red; */
     /* outline-offset: -2px; */
-    background-color: var(--color-brand-cornflower);
+    background: linear-gradient(-59.04deg, rgba(230, 169, 125, 0.2) 17.072%, rgba(255, 255, 255, 0.2) 51.462%), rgb(244, 240, 235);
 }
 
 
@@ -128,6 +127,27 @@ section {
   | Header
   |=======================
 */
+.hero-header {
+    text-transform: lowercase;
+}
+
+.header-logo {
+    text-transform: uppercase;
+}
+
 .menu-links-list {
     text-transform: uppercase;
+}
+
+/* 
+  |=======================
+  | Footer
+  |=======================
+*/
+.footer__menu {
+    text-transform: capitalize;
+}
+
+.footer__address-link {
+    text-transform: capitalize;
 }

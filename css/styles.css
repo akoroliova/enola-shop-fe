@@ -1,10 +1,19 @@
+/* cormorant-sc-regular - cyrillic-ext_latin */
 @font-face {
-    /* cormorant-sc-regular */
     font-display: swap;
     font-family: 'Cormorant SC';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/cormorant-sc-v18-cyrillic_cyrillic-ext_latin-regular.woff2') format('woff2');
+    src: url('../fonts/cormorant-sc-v18-cyrillic-ext_latin-regular.woff2') format('woff2');
+}
+
+/* cormorant-sc-500 - cyrillic-ext_latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Cormorant SC';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/cormorant-sc-v18-cyrillic-ext_latin-500.woff2') format('woff2');
 }
 
 /* cormorant-garamond-regular */
@@ -34,13 +43,31 @@
     src: url('../fonts/cormorant-garamond-v16-cyrillic_cyrillic-ext_latin-700.woff2') format('woff2');
 }
 
-/* noto-sans-regular */
+/* montserrat-regular - cyrillic-ext_latin */
 @font-face {
     font-display: swap;
-    font-family: 'Noto Sans';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/noto-sans-v36-cyrillic_cyrillic-ext_latin-regular.woff2') format('woff2');
+    src: url('../fonts/montserrat-v26-cyrillic-ext_latin-regular.woff2') format('woff2');
+}
+
+/* montserrat-italic - cyrillic-ext_latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/montserrat-v26-cyrillic-ext_latin-italic.woff2') format('woff2');
+}
+
+/* montserrat-700 - cyrillic-ext_latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/montserrat-v26-cyrillic-ext_latin-700.woff2') format('woff2');
 }
 
 :root {
@@ -49,9 +76,10 @@
     --color-brand-light-beige: rgb(239, 235, 232);
     --color-brand-dim-beige: rgb(217, 217, 217);
     --color-brand-beige: rgb(180, 170, 160);
-    --color-brand-dark-beige: rgb(112, 91, 79);
-    --color-brand-almost-black: rgba(217, 217, 217, 0);
+    --color-brand-dark-beige: rgb(110, 90, 80);
+    --color-brand-almost-black: rgba(0, 0, 0, 0.67);
     --color-brand-black: rgb(0, 0, 0);
+    --color-brand-gray: rgb(114, 114, 114);
 }
 
 body {
@@ -70,12 +98,11 @@ h5,
 h6,
 p {
     margin-top: 0;
-    margin-bottom: 0;
 }
 
-link,
-link:visited {
-    font-family: 'Noto Sans';
+a,
+a:visited {
+    font-family: 'Montserrat', sans-serif;
     color: var(--color-brand-almost-black);
     text-decoration: none;
 }
@@ -83,7 +110,6 @@ link:visited {
 ul,
 ol {
     list-style-type: none;
-    display: flex;
     margin: 0;
     padding: 0;
 }
@@ -97,29 +123,31 @@ svg {
 }
 
 button {
-    cursor: pointer;
-    border: 1px solid;
-
-    font-family: 'Noto Sans';
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-size: 21px;
     font-weight: 400;
     line-height: 25px;
     letter-spacing: 0%;
     text-align: center;
+
+    cursor: pointer;
+    border: 1px solid;
 }
 
 section {
-    padding: 100px 0;
+    margin-bottom: 60px;
 }
 
 .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
     /* to see container boundaries. Delete later */
-    /* outline: 2px solid red; */
-    /* outline-offset: -2px; */
+    /* outline: 2px solid red;
+    outline-offset: -2px; */
     background: linear-gradient(-59.04deg, rgba(230, 169, 125, 0.2) 17.072%, rgba(255, 255, 255, 0.2) 51.462%), rgb(244, 240, 235);
 }
-
 
 
 /* 
@@ -127,16 +155,90 @@ section {
   | Header
   |=======================
 */
-.hero-header {
-    text-transform: lowercase;
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    margin-top: 30px;
+    border-bottom: 1px solid var(--color-brand-dim-beige);
 }
 
-.header-logo {
+.menu {
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .menu-links-list {
+    font-size: 17px;
+
+
+    display: flex;
+    gap: 40px;
+}
+
+.header-brand-name {
+    font-family: 'Cormorant SC', serif;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 0.5em;
     text-transform: uppercase;
+}
+
+.search-form {
+    border-bottom: 1px solid var(--color-brand-dim-beige);
+}
+
+.search-input {
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    outline: none;
+
+    color: var(--color-brand-gray);
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: left;
+
+
+    width: 120px;
+    height: 20px;
+}
+
+.socials {
+    display: flex;
+    gap: 40px;
+}
+
+/* 
+  |=======================
+  | Main
+  |=======================
+*/
+.hero-container {
+    padding-top: 370px;
+    padding-bottom: 200px;
+    padding-left: 90px;
+    padding-right: 30px;
+    background-image: linear-gradient(to bottom,
+            var(--color-brand-dark-beige),
+            var(--color-brand--beige)),
+        url(../images/hero/hero-bg-image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-header {
+    margin-bottom: 25px;
+    text-transform: lowercase;
+}
+
+.hero-text {
+    margin-bottom: 25px;
 }
 
 /* 
@@ -144,10 +246,16 @@ section {
   | Footer
   |=======================
 */
-.footer__menu {
-    text-transform: capitalize;
-}
 
-.footer__address-link {
-    text-transform: capitalize;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
